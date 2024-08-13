@@ -1,0 +1,29 @@
+.border-pane {
+    -fx-pref-height: 300;
+    -fx-pref-width: 275;
+}
+
+.grid-pane {
+    -fx-alignment: center;
+    -fx-padding: 20 20 20 20;
+    -fx-vgap: 10;
+}
+
+.h-box {
+    -fx-alignment: center;
+    -fx-spacing: 10;
+}
+
+.small-text {
+    -fx-font-size: 15;
+    -fx-font-family: sans-serif;
+}
+
+.big-text {
+    -fx-font-size: 25;
+    -fx-font-family: sans-serif;
+}
+
+#meldung {
+    -fx-fill: red;
+}

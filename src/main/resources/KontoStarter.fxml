@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="oberflaeche.KontoStarter"
+            stylesheets="@KontoStarter.css"
+            styleClass="border-pane">
+    <top>
+        <Text fx:id="ueberschrift" text="Ein Konto verändern" BorderPane.alignment="CENTER" styleClass="big-text">
+        </Text>
+    </top>
+    <center>
+        <GridPane styleClass="grid-pane">
+            <children>
+                <Text fx:id="txtNummer" text="Kontonummer:" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="small-text"/>
+                <Text fx:id="nummer" text="$controller.girokonto.kontonummer" GridPane.columnIndex="1" GridPane.rowIndex="0"
+                styleClass="small-text"/>
+                <Text fx:id="txtStand" text="Kontostand:" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="small-text"/>
+                <Text fx:id="stand" GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="small-text"/>
+                <Text fx:id="txtGesperrt" text="Gesperrt: " GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="small-text"/>
+                <CheckBox fx:id="gesperrt" onAction="#setSperrung" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <Text fx:id="txtAdresse" text="Adresse: " GridPane.columnIndex="0" GridPane.rowIndex="3" styleClass="small-text"/>
+                <TextArea fx:id="adresse" onKeyTyped="#setAdresse" prefColumnCount="25" prefRowCount="2" GridPane.columnIndex="1"
+                          GridPane.rowIndex="3"/>
+                <Text fx:id="meldung" GridPane.columnIndex="0" GridPane.rowIndex="4"
+                      GridPane.fillWidth="2" GridPane.fillHeight="1" styleClass="small-text"/>
+            </children>
+        </GridPane>
+    </center>
+    <bottom>
+        <HBox fx:id="aktionen" styleClass="h-box">
+            <TextField fx:id="betrag" text="100.00"/>
+            <Button fx:id="einzahlen" text="Einzahlen" onAction="#einzahlen"/>
+            <Button fx:id="abheben" text="Abheben" onAction="#abheben"/>
+        </HBox>
+    </bottom>
+</BorderPane>
